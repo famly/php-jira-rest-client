@@ -513,7 +513,7 @@ class JiraClient
     /**
      * download and save into outDir.
      */
-    public function download(string $url, string $outDir, string $file, string $cookieFile = null): mixed
+    public function download(string $url, string $outDir, string $file, ?string $cookieFile = null): mixed
     {
         $curl_http_header = [
             'Accept: */*',
