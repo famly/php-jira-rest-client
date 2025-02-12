@@ -438,7 +438,7 @@ class JiraClient
     /**
      * Add authorize to curl request.
      */
-    protected function authorization(\CurlHandle $ch, array &$curl_http_headers, string $cookieFile = null): void
+    protected function authorization(\CurlHandle $ch, array &$curl_http_headers, ?string $cookieFile = null): void
     {
         // use cookie
         if ($this->getConfiguration()->isCookieAuthorizationEnabled()) {
