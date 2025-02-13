@@ -185,7 +185,7 @@ class JiraClient
      *
      * @return string|bool
      */
-    public function exec(string $context, array|string $post_data = null, string $custom_request = null, string $cookieFile = null): string|bool
+    public function exec(string $context, array|string $post_data = null, ?string $custom_request = null, ?string $cookieFile = null): string|bool
     {
         $url = $this->createUrlByContext($context);
 
