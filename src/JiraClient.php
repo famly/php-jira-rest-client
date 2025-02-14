@@ -59,7 +59,7 @@ class JiraClient
      *
      * @throws JiraException
      */
-    public function __construct(ConfigurationInterface $configuration = null, LoggerInterface $logger = null, string $path = './')
+    public function __construct(?ConfigurationInterface $configuration = null, ?LoggerInterface $logger = null, string $path = './')
     {
         if ($configuration === null) {
             if (!file_exists($path.'.env')) {
@@ -185,7 +185,7 @@ class JiraClient
      *
      * @return string|bool
      */
-    public function exec(string $context, array|string $post_data = null, ?string $custom_request = null, ?string $cookieFile = null): string|bool
+    public function exec(string $context, array|string|null $post_data = null, ?string $custom_request = null, ?string $cookieFile = null): string|bool
     {
         $url = $this->createUrlByContext($context);
 
